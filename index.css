@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#section1 {
+  background-image: url(pbg2.png);
+  background-size: cover;
+  background-position: center;
+  padding-top: 350px;
+}
+#myname {
+  font-size: 50px;
+}
+.falling {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f6b17a, 0 0 20px #fb8b24, 0 0 30px #ff9843,
+      0 0 40px #fe7a36, 0 0 50px #f3b95f, 0 0 60px #e60073, 0 0 70px #fde767;
+  }
+  to {
+    text-shadow: 0 0 20px, 0 0 30px #ff9843, 0 0 40px #fe7a36, 0 0 50px #f3b95f,
+      0 0 60px #e60073, 0 0 70px #fde767, #fff #f6b17a, 0 0 20px #fb8b24;
+  }
+}
+p span {
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 600px) {
+  #section1 {
+    padding-top: 250px;
+  }
+  .falling {
+    font-size: 40px;
+  }
+}
+
+img {
+  width: 18rem;
+  height: 10rem;
+}
+#section2 {
+  background-image: url("pbg4.png");
+  background-size: cover;
+  background-position: center;
+}
+#section3 {
+  background-image: url("pbg4.png");
+  background-size: cover;
+  background-position: center;
+}
+#section4 {
+  background-image: url(rotate.png);
+  background-size: cover;
+  background-position: center;
+}
+/*submt button*/
+#submit {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+#submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: black;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0.3);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0.3);
+  transition: all 250ms;
+}
+
+#submit:hover {
+  color: #e8e8e8;
+}
+
+#submit:hover::before {
+  width: 100%;
+}
+.box {
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+.box.show {
+  transform: translateX(0);
+}
+.social-media i:hover {
+  color: #ff9843;
+  cursor: pointer;
+}
